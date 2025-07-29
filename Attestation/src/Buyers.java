@@ -135,9 +135,9 @@ class App {
   Map<String, Product> products = new HashMap<>();
 
   // Ввод покупателей
-  System.out.println("Введите покупателей в формате: Имя = Сумма");
+  System.out.println("Введите покупателей в формате: Имя = Сумма  (END для завершения)");
   String input;
-  while (!(input = scanner.nextLine()).isEmpty()) {
+  while (!(input = scanner.nextLine()).equalsIgnoreCase("END")) {
    try {
     String[] parts = input.split("=");
     String name = parts[0].trim();
@@ -149,8 +149,8 @@ class App {
   }
 
   // Ввод продуктов
-  System.out.println("Введите продукты в формате: Название = Стоимость");
-  while (!(input = scanner.nextLine()).isEmpty()) {
+  System.out.println("Введите продукты в формате: Название = Стоимость  (END для завершения)");
+  while (!(input = scanner.nextLine()).equalsIgnoreCase("END")) {
    try {
     String[] parts = input.split("=");
     String name = parts[0].trim();
